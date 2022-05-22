@@ -5,30 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test </title>
-
+    <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="{{ asset('js/ajax_form_submit.js') }}"></script>
-    {{-- <script src="{{  asset('backend/js/ajax_form_submit.js') }}"></script> --}}
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                
+
                 <h5>Laravel Contact Form</h5>
 
                 <form class="ajax-form" method="post" action="{{ route('test_service.submit') }}">
@@ -45,10 +31,24 @@
                     <button type="submit" class="btn btn-primary mt-4">
                         Submit
                     </button>
+
+                    <span class="loading"></span>
                 </form>
 
             </div>
         </div>
     </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{{ asset('js/ajax_form_submit.js') }}"></script>
+
+
 </body>
+
 </html>
